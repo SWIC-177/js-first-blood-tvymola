@@ -1,7 +1,4 @@
+// Function definition for a process that greets the user by name
 function greet(name) {
   return `Hello, ${name}`;
 }
-
-const greeting = greet("Tracy");
-
-console.log(greeting);
