@@ -3,5 +3,8 @@ function greet(name) {
   return `Hello, ${name}`;
 }
 
-// Call the function passing in my name as a string argument and assigning the return value to a variable called greeting
+/* Call the function passing in my name as a string argument and assigning the return value to a variable called greeting */
 const greeting = greet("Tracy");
+
+// Print the result to the console greeting the user
+console.log(greeting);
