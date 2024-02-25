@@ -1,5 +1,5 @@
 function greet() {
-  let name = prompt("What's your name?");
+  let name = windows.prompt("What's your name?");
   console.log("Hello, ", name);
 }
 
