@@ -5,6 +5,7 @@
 // The for loop runs as long as the variable i is less than or equal to 100
 // The i variable is incremented by 1 in each iteration
 for (let i = 1; i <= 100; i++) {
+  // The if statement checks if the number is divisible by 3 and 5
   if (i % 3 === 0 && i % 5 === 0) {
     console.log("FizzBuzz");
   } else if (i % 3 === 0) {
