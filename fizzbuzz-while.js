@@ -1,7 +1,7 @@
 /* Prints numbers from 1 to 100, replacing multiples of 3 with "Fizz",
 multiples of 5 with "Buzz", and multiples of both 3 and 5 with "FizzBuzz". */
 
-// The number variable is initialized to 1.
+// The number variable is initialized to 1
 let number = 1;
 
 // The while loop runs as long as the number is less than or equal to 100
