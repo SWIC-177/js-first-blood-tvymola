@@ -1,32 +1,17 @@
-// create an empty object named "person"
-const person = {};
+// This code demonstrates a function returning a function, or the concept known as 'closure'
+// Function definition for logging "Outer function" to the console
+function outerFunction() {
+  console.log("Outer function");
 
-// set the "name" property of the "person" object
-person.name = "Tracy";
+  // Function definition for logging 'Inner function' to the console
+  function innerFunction() {
+    console.log("Inner function");
+  }
+  // Return the inner function from the outer function
+  return innerFunction;
+}
+// Call the outerFunction and store the returned function in a variable named returnedFunction
+const returnedFunction = outerFunction();
 
-// print the "person" object to the console
-console.log(person);
-
-// set the "age" property of the "person" object
-person.age = 22;
-
-// print the "person"  to object to the console
-console.log(person);
-
-// set the "hair color" property of the "person" object
-person.hairColor = "blonde";
-
-// print the "person" object to the console
-console.log(person);
-
-// set the "eye color" property of the "person" object
-person.eyeColor = "blue";
-
-// print the "person" object to the console
-console.log(person);
-
-// set the "occupation" property of the "person" object
-person.occupation = "E-Business Analyst";
-
-// print the "person" object to the console
-console.log(person);
+// Call the returned function variable to display the message 'Outer function' and 'Inner function' on the console
+returnedFunction();
