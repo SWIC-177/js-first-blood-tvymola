@@ -1,21 +1,40 @@
-// Last exercise for week 11
-// Function definition for a function that takes one parameter named score and returns a function that increments the score
-function createScoreIncrement(score) {
-  // Return a function that increments the score by a given value
-  return function incrementScore(increment) {
-    // Increment the score by the given value and display the updated score
-    const updatedScore = score + increment;
-    return updatedScore;
-  };
+/* Function definition named createAdder that takes a parameter named
+ score and returns an arrow function that takes a parameter called increment and returns the sum of score and increment */
+
+function createAdder(score) {
+  // Return an arrow function that takes a parameter called increment and returns the sum of the score and increment value
+  return (increment) => score + increment;
 }
 
-// Assign the returned function from the createScoreIncrement function to a variable named incrementScoreBy3
+// Create a variable named addToZero and assign it the result of calling createAdder with an argument of 0
+const addToZero = createAdder(0);
 
-const incrementScoreBy3 = createScoreIncrement(0);
-
-// Call the incrementScoreBy3 variable that invokes the function with an argument of 3 and outputs the result to the console
-
-console.log(incrementScoreBy3(3));
+// Display the result of calling addToZero with an argument of 3 to the console
+console.log(addToZero(3));
 // --> 3
-console.log(incrementScoreBy3(5));
+
+// Display the result of calling addToZero with an argument of 6 to the console
+console.log(addToZero(6));
+// --> 6
+
+// Declare a variable named addToSix and assign it the result of calling createAdder with an argument of 6
+const addToSix = createAdder(6);
+
+// Display the result of calling addToSix with an argument of 2 to the console
+console.log(addToSix(2));
 // --> 8
+
+// Display the result of calling addToSix with an argument of 3 to the console
+console.log(addToSix(3));
+// --> 9
+
+// Declare a variable named addToNine and assign it the result of calling createAdder with an argument of 9
+const addToNine = createAdder(9);
+
+// Display the result of calling addToNine with an argument of 6 to the console
+console.log(addToNine(6));
+// --> 15
+
+// Display the result of calling addToNine with an argument of 3 to the console
+console.log(addToNine(3));
+// --> 12
