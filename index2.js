@@ -1,5 +1,5 @@
 // This example demonstrates how to pass by reference in JavaScript
-// Declare a constant object literal with properties
+// Declare a nested object literal with properties
 const person = {
   name: "John Doe",
   age: 23,
