@@ -2,7 +2,7 @@
  score and returns a function that takes a parameter named increment and returns the sum of score and increment */
 
 function createAdder(score) {
-  // Return a function that takes a parameter called increment and returns the sum of the score and increment value
+  // Return a function that takes a parameter named increment and returns the sum of the score and increment value
   return (increment) => score + increment;
 }
 

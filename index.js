@@ -1,13 +1,23 @@
-// Passing Functions as Arguments to Other Functions
-// Function definition for displaying "Hello!" on the console
-function sayHello() {
-  console.log("Hello!");
-}
+// This example demonstrates how to pass by copy in JavaScript
+// Define a variable name and assign it a value
+const name = "John Doe";
+// Assign the value of name to otherName
+let otherName = name;
 
-// Function definition for executing a placeholder function
-function executeFunction(func) {
-  func();
-}
+// Log the values of name and otherName
+console.log(`Name is: ${name}`);
+console.log(`Other name is: ${otherName}`);
 
-// Function call that invokes the executeFunction function passing in the sayHello function into the func placeholder
-executeFunction(sayHello);
+// Assign a new value to otherName
+otherName = "Jane Doe";
+
+// Log the values of name and otherName
+console.log(`Name is: ${name}`);
+console.log(`Other name is: ${otherName}`);
+
+// Assign a new value to otherName
+otherName = 23;
+
+// Log the values of name and otherName
+console.log(`Name is: ${name}`);
+console.log(`Other name is: ${otherName}`);
