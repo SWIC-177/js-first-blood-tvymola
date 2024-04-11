@@ -7,7 +7,7 @@ const person = {
 
 // Declare a function that will update the name property of the person object
 function updatePersonName(p, newName) {
-  // Create a copy of the person object using the spread operator, add hobbies property and assign an array of hobbies
+  // Create a copy of the person object using the spread operator, assign a name property using the newName parameter, and add a hobbies property and assign an array of hobbies
   return { ...p, name: newName, hobbies: ["reading", "writing"] };
 }
 
