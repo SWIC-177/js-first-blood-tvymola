@@ -1,18 +1,13 @@
-// This function is used to demonstrate the concept of pass by value in JavaScript
-// Declare a constant variable younger1 and assign it a value
-const younger1 = 13;
+/* This example opens the webpage for changing the background color of the page. We use the exec() method from the child_process module to launch the HTML page in the default browser. */
 
-// Assign the value of younger1 to younger2
-let younger2 = younger1;
+// Define the 'exec' method to run shell commands from the child_process module
+const { exec } = require("child_process");
 
-// Function definition for incrementing the age
-function incrementAge(age) {
-  return age + 1;
-}
+// Path module for working with file paths in Node.js
+const path = require("path");
 
-// Function call that invokes the incrementAge function reassigning the output of the function to younger2
-younger2 = incrementAge(younger2);
+// Define the file path to the HTML file by using the join method of the path module to concatenate the directory name and file name
+const filePath = path.join(__dirname, "bg-change.html");
 
-// Log the values of younger1 and younger2 to the console
-console.log(`Younger1 is: ${younger1}`);
-console.log(`Younger2 is: ${younger2}`);
+// Call the 'exec' method to run the command 'start' on Windows to open the file
+exec(`start ${filePath}`);

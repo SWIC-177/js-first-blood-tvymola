@@ -1,18 +1,12 @@
-// Refactored to use less lines of code within the function to a single line
-// Declare a person object with name and age properties
-const person = {
-  name: "John Doe",
-  age: 23,
-};
+/* This example demonstrates how the Navigator object in the BOM can be used to access various properties related to the user's browsing environment. */
 
-// Declare a function that will update the name property of the person object
-function updatePersonName(p, newName) {
-  // Create a copy of the person object using the spread operator, assign a name property using the newName parameter, and add a hobbies property and assign an array of hobbies
-  return { ...p, name: newName, hobbies: ["reading", "writing"] };
-}
+// Define a navigator object with a language property
+const navigator = { language: "en-US" };
 
-// Call the updatePersonName function and pass the person object and the new name to the updatedPerson variable
-const updatedPerson = updatePersonName(person, "Jane Doe");
+// Accessing the Navigator Object in JavaScript to Get Browser language
+const preferredLanguage = navigator.language;
 
-// Display the updatedPerson object on the console
-console.log(updatedPerson);
+// Output the preferred language to the console using a template literal
+console.log(`Preferred Language: ${preferredLanguage}`);
+
+// MDN Reference: navigator.language

@@ -1,23 +1,22 @@
-// This example demonstrates how to pass by copy in JavaScript
-// Define a variable name and assign it a value
-const name = "John Doe";
-// Assign the value of name to otherName
-let otherName = name;
+/* These examples demonstrate how the Navigator object in the BOM can be used to access various properties and functionalities related to the user's browsing environment. */
 
-// Log the values of name and otherName
-console.log(`Name is: ${name}`);
-console.log(`Other name is: ${otherName}`);
+// Define a navigator object with language and online properties
+const navigator = { language: "en-US", onLine: true };
 
-// Assign a new value to otherName
-otherName = "Jane Doe";
+// Access the Navigator Object in JavaScript to Get Browser language
+const preferredLanguage = navigator.language;
 
-// Log the values of name and otherName
-console.log(`Name is: ${name}`);
-console.log(`Other name is: ${otherName}`);
+// Output the preferred language to the console using a template literal
+console.log(`Preferred Language: ${preferredLanguage}`);
 
-// Assign a new value to otherName
-otherName = 23;
+// MDN Reference: navigator.language
 
-// Log the values of name and otherName
-console.log(`Name is: ${name}`);
-console.log(`Other name is: ${otherName}`);
+/* We can also use the navigator.onLine property to check if the browser is currently online or offline. This can be useful for handling network-related functionality in your web applications. */
+
+// Check if the browser is online or offline using the navigator.onLine property
+const isOnline = navigator.onLine;
+
+// Output the online status of the browser to the console
+console.log(`Online Status: ${isOnline}`);
+
+// MDN Reference: navigator.onLine

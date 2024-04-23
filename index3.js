@@ -1,27 +1,12 @@
-// This example will demonstrate how to pass by reference using the spread operator
-// Declare a person object with nested address object
-const person = {
-  age: 23,
-  address: {
-    street: "123 Main St",
-    city: "New York",
-    state: "NY",
-    zip: "10001",
-  },
-};
+/* Use the navigator.onLine property to check if the browser is currently online or offline. This can be useful for handling network-related functionality in your web applications. */
 
-// Declare a function that will update the name property of the person object
-function updatePersonName(p, newName) {
-  // Create a copy of the person object using the spread operator
-  const p2Update = { ...p };
+// Define a navigator object with an online property
+const navigator = { onLine: true };
 
-  // Update the name property of the p2Update object
-  p2Update.name = newName;
-  return p2Update;
-}
+// Check if the browser is online or offline using the navigator.onLine property
+const isOnline = navigator.onLine;
 
-// Call the updatePersonName function and pass the person object and the new name to the updatedPerson variable
-const updatedPerson = updatePersonName(person, "Jane Doe");
+// Output the online status of the browser to the console
+console.log(`Online Status: ${isOnline}`);
 
-// Display the updatedPerson object on the console
-console.log(updatedPerson);
+// MDN Reference: navigator.onLine

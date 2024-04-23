@@ -1,22 +1,13 @@
-// This example demonstrates how to pass by reference in JavaScript
-// Declare a nested object literal with properties
-const person = {
-  name: "John Doe",
-  age: 23,
-  address: {
-    street: "123 Main St",
-    city: "New York",
-    state: "NY",
-    zip: "10001",
-  },
-};
+/* This example opens the webpage for adding a new element to the page. We use the exec() method from the child_process module to execute the command to open the HTML file. */
 
-// Create a new object with the same properties as the original object.
-const otherPerson = { ...person };
+// Define the 'exec' method to run shell commands
+const { exec } = require("child_process");
 
-// Assign a new value to the name property of otherPerson
-otherPerson.name = "Jane Doe";
+// Path module for working with file paths in Node.js
+const path = require("path");
 
-// Log the values of the name property of person and otherPerson to the console.
-console.log(`Person's name is: ${person.name}`);
-console.log(`Other Person's name is: ${otherPerson.name}`);
+// Define the file path to the HTML file by using the join method of the path module to concatenate the directory name and file name
+const filePath = path.join(__dirname, "add-new-element.html");
+
+// Use the 'exec' method to launch the Windows 'start' command to open the file defined by the file path
+exec(`start ${filePath}`);

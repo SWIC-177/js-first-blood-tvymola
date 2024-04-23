@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Style Element</title>
+    <script>
+      // Define the function to change the background color of the div element
+      function changeColor() {
+        // Get the div element by its id
+        const div = document.getElementById("myDiv");
+        // Assign a lightblue background color to the div element
+        div.style.backgroundColor = "lightblue";
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      id="myDiv"
+      style="width: 100px; height: 100px; border: 1px solid black"
+    ></div>
+    <button onclick="changeColor()">Change Color</button>
+  </body>
+</html>
